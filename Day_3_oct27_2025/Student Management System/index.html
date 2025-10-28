@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Management System - ES6 Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- LOGIN SECTION -->
+    <div id="loginSection">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Username" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <button id="loginBtn">Login</button>
+      <p>Don’t have an account? <a href="#" id="showRegister">Register here</a></p>
+    </div>
+
+    <!-- REGISTER SECTION -->
+    <div id="registerSection" class="hidden">
+      <h2>Register</h2>
+      <input type="text" id="regUsername" placeholder="Username" />
+      <input type="password" id="regPassword" placeholder="Password" />
+      <input type="email" id="regEmail" placeholder="Email" />
+      <button id="registerBtn">Register</button>
+      <p>Already have an account? <a href="#" id="showLogin">Go to Login</a></p>
+    </div>
+
+    <!-- MAIN APP SECTION -->
+    <div id="appSection" class="hidden">
+      <h1>Student Management System (ES6 Demo)</h1>
+      <p id="welcomeMessage"></p>
+      <button id="logoutBtn">Logout</button>
+      <hr />
+
+      <button id="runDemoBtn">Run Assignment Demo</button>
+      <div id="output"></div>
+
+      <h3>Add Student</h3>
+      <div class="student-form">
+        <input type="text" id="studentName" placeholder="Name" />
+        <input type="number" id="studentAge" placeholder="Age" />
+        <input type="text" id="studentSkills" placeholder="Skills (comma separated)" />
+        <input type="text" id="studentGrade" placeholder="Grade (A/B/C...)" />
+        <button id="addStudentBtn">Add Student</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

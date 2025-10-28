@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each Demo</title>
+</head>
+<body>
+    <h1>For Each Loop Demo</h1>
+    <script>
+        <!-- //Creating an collection of objects -->
+        const products = [
+            { id: 1, name: "Laptop", price: 1000 },
+            { id: 2, name: "Phone", price: 500 },
+            { id: 3, name: "Tablet", price: 300 }
+        ];
+        //displaying each product using forEach in html
+        document.body.innerHTML += "<h2>Product List:</h2>";
+        products.forEach((product) => {
+            document.body.innerHTML += `<p>Product ID: ${product.id}, Name: ${product.name}, Price: $${product.price}</p>`;
+        });
+    </script>
+    <script>
+        const fruits = ["Apple", "Banana", "Cherry"];
+        fruits.forEach((fruit) => {
+            console.log(fruit);
+        });
+    </script>
+</body>
+</html>

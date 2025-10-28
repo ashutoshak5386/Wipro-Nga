@@ -1,0 +1,96 @@
+<!-- following are the ES6 features:
+1. let and const
+2. Arrow functions
+3. Template literals
+4. Destructuring assignment
+5. Default parameters
+6. Rest and spread operators
+7. Modules
+8. Classes -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Features</title>
+</head>
+<body>
+    <h1>ES6 Features</h1>
+    <ul>
+        <li>let and const</li>
+        <li>Arrow functions</li>
+        <li>Template literals</li>
+        <li>Destructuring assignment</li>
+        <li>Default parameters</li>
+        <li>Rest and spread operators</li>
+        <li>Modules</li>
+        <li>Classes</li>
+    </ul>
+    <script>
+       // Example of Spread operator with objects
+        const obj1 = { name: 'Alice', age: 25 };
+        const updatedPerson = { ...obj1, city: 'New York' };
+        console.log("Updated Person:", updatedPerson);
+
+
+        //spread operator with array
+        const numbers = [10, 20, 30];
+        const moreNumbers = [...numbers, 40, 50];
+        console.log("More Numbers:", moreNumbers);
+    </script>
+    <script>
+        // we can try creating a student object and add id to it using spread operator
+        const student = { name: 'John', class: '10th' };
+        const studentWithId = { ...student, id: 'S12345' };
+        console.log("Student with ID:", studentWithId);
+    </script>
+
+    <script>
+        //traditional function
+        function add(a, b) {
+            return a + b;
+        }
+        console.log("Sum using traditional function:", add(5, 10));
+        //arrow function
+        const addArrow = (a, b) => a + b;
+        console.log("Sum using arrow function:", addArrow(5, 10));
+
+        //square using arrow function
+        const square = x => x * x;
+        console.log("Square using arrow function:", square(6));
+
+    </script>
+    <!-- in ES6 we can use OOP -->
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            greet() {
+                console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+            }
+        }
+
+        const person1 = new Person('Alice', 30);
+        person1.greet();
+    </script>
+
+    <!-- example of map -->
+    <script>
+        const numberss = [1, 2, 3, 4, 5];
+        const doubled = numberss.map(num => num * 2);
+        console.log("Doubled Numbers:", doubled);
+    </script>
+
+        console.log("Unique Numbers:", [...uniqueNumbers]);
+    </script>
+    <!-- example of set -->
+    <script>
+        const uniqueNumbers = new Set([1, 2, 2, 3, 4, 4, 5]);
+        console.log("Unique Numbers:", [...uniqueNumbers]);
+    </script>
+    
+</body>
+</html>
