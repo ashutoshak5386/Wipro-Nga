@@ -12,4 +12,36 @@
 <!-- Why API is future of software development? ans how it is being replaced via AI Agents  -->
 <!-- REST API is designed to be scalable and can handle a large number of requests from multiple clients simultaneously. -->
 
-To demonstrate how to perform GET, POST, PUT, and DELETE operations on a REST API using Fetch API and Async/Await, display data dynamically on the web page using DOM manipulation, and handle errors gracefully, we can create a simple web application.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSONPlaceholder Users CRUD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Users CRUD (JSONPlaceholder)</h1>
+
+    <div class="form-section">
+      <input type="text" id="name" placeholder="Name" />
+      <input type="email" id="email" placeholder="Email" />
+      <input type="text" id="username" placeholder="Username" />
+      <button id="addUser">Add User</button>
+      <button id="updateUser" disabled>Update User</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>Email</th><th>Username</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="userTable"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Todo App - Fetch API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f7fa;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 45%;
+      min-width: 300px;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 6px;
+      background: #e8f0fe;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 Blog Posts & ✅ Todo List</h1>
+  <div id="errorMessage" class="error"></div>
+
+  <div class="container">
+    <div class="card" id="postsSection">
+      <h2>Blog Posts</h2>
+      <div id="posts"></div>
+    </div>
+
+    <div class="card" id="todosSection">
+      <h2>Todo List</h2>
+      <ul id="todos"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
