@@ -1,0 +1,127 @@
+[{
+  "_id": {
+    "$oid": "6904e3a4f3a61a1ba8f7d017"
+  },
+  "title": "Foundation",
+  "genre": "Science Fiction",
+  "publicationYear": 1951,
+  "authorId": {
+    "$oid": "6904e25ef3a61a1ba8f7d011"
+  },
+  "ratings": [
+    {
+      "user": "Alice Johnson",
+      "score": 5,
+      "comment": "Masterpiece of sci-fi!"
+    },
+    {
+      "user": "Bob Smith",
+      "score": 4,
+      "comment": "Great worldbuilding"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6904e3a4f3a61a1ba8f7d018"
+  },
+  "title": "I, Robot",
+  "genre": "Science Fiction",
+  "publicationYear": 2004,
+  "authorId": {
+    "$oid": "6904e25ef3a61a1ba8f7d011"
+  },
+  "ratings": [
+    {
+      "user": "Carol White",
+      "score": 4.5,
+      "comment": "Thought-provoking"
+    },
+    {
+      "user": "Bob Smith",
+      "score": 4.2,
+      "comment": "Interesting take on AI"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6904e3a4f3a61a1ba8f7d019"
+  },
+  "title": "Harry Potter and the Philosopher's Stone",
+  "genre": "Fantasy",
+  "publicationYear": 1997,
+  "authorId": {
+    "$oid": "6904e25ef3a61a1ba8f7d012"
+  },
+  "ratings": [
+    {
+      "user": "Alice Johnson",
+      "score": 5,
+      "comment": "Magical and captivating!"
+    },
+    {
+      "user": "Carol White",
+      "score": 5,
+      "comment": "Best book ever!"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6904e3a4f3a61a1ba8f7d01a"
+  },
+  "title": "Mistborn: The Final Empire",
+  "genre": "Fantasy",
+  "publicationYear": 2006,
+  "authorId": {
+    "$oid": "6904e25ef3a61a1ba8f7d013"
+  },
+  "ratings": [
+    {
+      "user": "Bob Smith",
+      "score": 4.8,
+      "comment": "Amazing magic system"
+    },
+    {
+      "user": "Alice Johnson",
+      "score": 4.5,
+      "comment": "Incredible plot twists"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6904e3a4f3a61a1ba8f7d01b"
+  },
+  "title": "The Way of Kings",
+  "genre": "Fantasy",
+  "publicationYear": 2010,
+  "authorId": {
+    "$oid": "6904e25ef3a61a1ba8f7d013"
+  },
+  "ratings": [
+    {
+      "user": "Carol White",
+      "score": 5,
+      "comment": "Epic fantasy at its finest"
+    },
+    {
+      "user": "Bob Smith",
+      "score": 4.7,
+      "comment": "Long but worth it"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6904e47ff3a61a1ba8f7d01d"
+  },
+  "title": "The Robots of Dawn",
+  "genre": "Science Fiction",
+  "publicationYear": 1983,
+  "authorId": {
+    "$oid": "6904e25ef3a61a1ba8f7d011"
+  },
+  "ratings": []
+}]
