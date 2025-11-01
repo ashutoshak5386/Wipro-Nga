@@ -1,0 +1,52 @@
+{
+  "events": [
+    {
+      "title": "Tech Innovation Summit 2025",
+      "category": "technology",
+      "date": "2025-12-15",
+      "location": "Mumbai, India"
+    },
+    {
+      "title": "Winter Music Festival",
+      "category": "music",
+      "date": "2026-01-20",
+      "location": "Bangalore, India"
+    },
+    {
+      "title": "International music Expo",
+      "category": "music",
+      "date": "2025-11-05",
+      "location": "Chennai, India"
+    },
+    {
+      "title": "Global business Conference",
+      "category": "business",
+      "date": "2026-02-10",
+      "location": "Hyderabad, India"
+    },
+    {
+      "title": "cultural sports Festival",
+      "category": "sports",
+      "date": "2025-10-25",
+      "location": "Pune, India"
+    },
+    {
+      "title": "Art & Design Fair",
+      "category": "music",
+      "date": "2025-09-15",
+      "location": "Kolkata, India"
+    },
+    {
+      "title": "Healthcare Innovations Forum",
+      "category": "healthcare",
+      "date": "2026-03-18",
+      "location": "Delhi, India"
+    },
+    {
+      "title": "international business Conference",
+      "category": "business",
+      "date": "2025-11-30",
+      "location": "Ahmedabad, India"
+    }
+  ]
+}
