@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "fullName": "Amit Kumar",
+    "email": "amit@example.com",
+    "phone": "9876543210",
+    "ticket": "VIP",
+    "preferences": ["Networking", "Workshop"]
+  },
+  {
+    "id": 2,
+    "fullName": "Sneha Patel",
+    "email": "sneha@example.com",
+    "phone": "9876509876",
+    "ticket": "Standard",
+    "preferences": ["Exhibits"]
+  }
+]

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container py-4">
+    <h1 class="text-center mb-4">Customer Dashboard</h1>
+
+    <!-- Load Button -->
+    <div class="text-center mb-4">
+      <button id="loadBtn" class="btn btn-primary btn-lg">Load Customers</button>
+    </div>
+
+    <!-- Customer List -->
+    <div id="customerList" class="row g-3"></div>
+    <div id="message" class="text-center text-muted mt-4"></div>
+  </div>
+
+  <script src="CustomerModule.js"></script>
+  <script>
+    const customerList = document.getElementById('customerList');
+    const message = document.getElementById('message');
+    const loadBtn = document.getElementById('loadBtn');
+
+    const loadCustomers = async () => {
+      try {
+        message.textContent = 'Loading...';
+        loadBtn.disabled = true;
+
+        const manager = new CustomerManager();
+        await manager.fetchFromAPI('customers.json');
+        
+        const customers = manager.getAllCustomers();
+        displayCustomers(customers);
+        
+        message.textContent = `Loaded ${customers.length} customers`;
+        loadBtn.textContent = 'Reload';
+        loadBtn.disabled = false;
+        
+      } catch (err) {
+        message.textContent = 'Error: ' + err.message;
+        loadBtn.disabled = false;
+      }
+    };
+
+    const displayCustomers = (customers) => {
+      customerList.innerHTML = '';
+      customers.forEach(c => {
+        customerList.innerHTML += `
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5>${c.fullName}</h5>
+                <span class="badge bg-${c.ticket.toLowerCase()}">${c.ticket}</span>
+                <p class="mt-2 mb-1"><strong>Email:</strong> ${c.email}</p>
+                <p class="mb-1"><strong>Phone:</strong> ${c.phone}</p>
+                <p class="mb-0"><strong>Preferences:</strong> ${c.preferences?.join(', ') || 'None'}</p>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    };
+
+    loadBtn.addEventListener('click', loadCustomers);
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "none",
+    "lib": ["ESNext", "DOM"],
+    "strict": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["CustomerModule.ts"]
+}
