@@ -9,7 +9,7 @@ async function connectToMongoDB() {
   try {
     console.log("⏳ Attempting connection...");
     await client.connect();
-    console.log("✅ Successfully connected to MongoDB!");
+    console.log(" Successfully connected to MongoDB!");
 
     // Optional: check available databases
     const dbList = await client.db().admin().listDatabases();
