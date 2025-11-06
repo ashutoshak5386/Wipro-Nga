@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-800;
+}
+/* src/index.css */
+.btn-outline-indigo {
+  border-color: #4f46e5;
+  color: #4f46e5;
+}
+
+.btn-outline-indigo:hover {
+  background-color: #4f46e5;
+  color: white;
+}
+
