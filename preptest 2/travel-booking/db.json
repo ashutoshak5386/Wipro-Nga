@@ -1,0 +1,25 @@
+{
+  "packages": [
+    {
+      "id": 1,
+      "name": "Paris Delight",
+      "price": 999,
+      "nights": 5,
+      "rating": 4.7
+    },
+    {
+      "id": 2,
+      "name": "Bali Escape",
+      "price": 799,
+      "nights": 7,
+      "rating": 4.8
+    },
+    {
+      "id": 3,
+      "name": "Maldives Getaway",
+      "price": 1199,
+      "nights": 6,
+      "rating": 4.9
+    }
+  ]
+}
