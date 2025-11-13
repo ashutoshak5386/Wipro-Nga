@@ -1,58 +1,92 @@
 // src/userstory3/BookingForm.js
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-import useSubmitBooking from './hooks/useSubmitBooking';
-
-const schema = Yup.object({
-  name: Yup.string().required('Required'),
-  email: Yup.string().email('Invalid').required('Required'),
-  packageId: Yup.number().required('Required'),
-  travelers: Yup.number().min(1).required('Required'),
-});
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 export default function BookingForm() {
-  const { status, submit } = useSubmitBooking();
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      destination: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .min(2, "Name must be at least 2 characters")
+        .required("Name is required"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Email is required"),
+      destination: Yup.string().required("Destination is required"),
+    }),
+    onSubmit: (values, { resetForm }) => {
+      alert(`Booking confirmed for ${values.name} to ${values.destination}!`);
+      resetForm();
+    },
+  });
+
   return (
     <div className="container my-4">
-      <h4>Book a Package</h4>
-      <Formik
-        initialValues={{ name: '', email: '', packageId: '', travelers: 1 }}
-        validationSchema={schema}
-        onSubmit={async (values, { resetForm }) => {
-          await submit(values);
-          resetForm();
-        }}
+      <h3 className="mb-3 text-center">Book Your Trip</h3>
+      <form
+        onSubmit={formik.handleSubmit}
+        className="col-12 col-md-6 mx-auto p-4 border rounded shadow-sm bg-light"
       >
-        <Form className="row g-3">
-          <div className="col-md-6">
-            <label className="form-label">Name</label>
-            <Field name="name" className="form-control" />
-            <div className="text-danger"><ErrorMessage name="name" /></div>
-          </div>
-          <div className="col-md-6">
-            <label className="form-label">Email</label>
-            <Field name="email" type="email" className="form-control" />
-            <div className="text-danger"><ErrorMessage name="email" /></div>
-          </div>
-          <div className="col-md-6">
-            <label className="form-label">Package ID</label>
-            <Field name="packageId" type="number" className="form-control" />
-            <div className="text-danger"><ErrorMessage name="packageId" /></div>
-          </div>
-          <div className="col-md-6">
-            <label className="form-label">Travelers</label>
-            <Field name="travelers" type="number" className="form-control" />
-            <div className="text-danger"><ErrorMessage name="travelers" /></div>
-          </div>
-          <div className="col-12">
-            <button type="submit" className="btn btn-primary" disabled={status === 'submitting'}>
-              {status === 'submitting' ? 'Submitting…' : 'Submit Booking'}
-            </button>
-            {status === 'success' && <span className="ms-2 text-success">Saved!</span>}
-            {status === 'error' && <span className="ms-2 text-danger">Error</span>}
-          </div>
-        </Form>
-      </Formik>
+        {/* Name */}
+        <div className="mb-3">
+          <label className="form-label fw-semibold">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            className={`form-control ${
+              formik.touched.name && formik.errors.name ? "is-invalid" : ""
+            }`}
+            {...formik.getFieldProps("name")}
+          />
+          {formik.touched.name && formik.errors.name && (
+            <div className="invalid-feedback">{formik.errors.name}</div>
+          )}
+        </div>
+
+        {/* Email */}
+        <div className="mb-3">
+          <label className="form-label fw-semibold">Email</label>
+          <input
+            type="email"
+            name="email"
+            className={`form-control ${
+              formik.touched.email && formik.errors.email ? "is-invalid" : ""
+            }`}
+            {...formik.getFieldProps("email")}
+          />
+          {formik.touched.email && formik.errors.email && (
+            <div className="invalid-feedback">{formik.errors.email}</div>
+          )}
+        </div>
+
+        {/* Destination */}
+        <div className="mb-3">
+          <label className="form-label fw-semibold">Destination</label>
+          <input
+            type="text"
+            name="destination"
+            className={`form-control ${
+              formik.touched.destination && formik.errors.destination
+                ? "is-invalid"
+                : ""
+            }`}
+            {...formik.getFieldProps("destination")}
+          />
+          {formik.touched.destination && formik.errors.destination && (
+            <div className="invalid-feedback">
+              {formik.errors.destination}
+            </div>
+          )}
+        </div>
+
+        <button type="submit" className="btn btn-primary w-100">
+          Submit Booking
+        </button>
+      </form>
     </div>
   );
 }

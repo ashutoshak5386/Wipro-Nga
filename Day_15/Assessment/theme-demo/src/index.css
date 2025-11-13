@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Themes */
+.light-mode {
+  background: #ffffff;
+  color: #000;
+  min-height: 100vh;
+}
+.dark-mode {
+  background: #111;
+  color: #ddd;
+  min-height: 100vh;
+}
+
+/* Toggle */
+.theme-toggle {
+  z-index: 9999;
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  border-radius: 24px;
+  padding: 8px 12px;
+}
+
+/* Day 14 look */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  text-align: center;
+}
+.course-box {
+  background: #d9e8ff;
+  padding: 24px;
+  border-radius: 10px;
+  margin: 18px auto;
+}
+.instructor-box {
+  background: #d6f5e1;
+  padding: 24px;
+  border-radius: 10px;
+  margin: 18px auto;
+}
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.stats-card {
+  width: 210px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  color: #111;
+}
+.dark-mode .stats-card {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index: 2000;
+}
+.modal-content {
+  background: #fff;
+  padding: 18px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 520px;
+}
+.dark-mode .modal-content { background: #222; color: #fff; }
+
+/* Offline banner */
+.offline-banner {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  background: #ffb703;
+  color: #111;
+  padding: 8px 12px;
+  border-radius: 0 0 8px 8px;
+  z-index: 9998;
+}
