@@ -1,0 +1,1 @@
+This is input text for promises and async/await.
