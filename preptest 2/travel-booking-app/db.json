@@ -1,0 +1,7 @@
+{
+  "packages": [
+    { "id": 1, "name": "Goa Beach Trip", "price": 12000, "days": 3 },
+    { "id": 2, "name": "Manali Snow Tour", "price": 18000, "days": 5 },
+    { "id": 3, "name": "Dubai Premium Tour", "price": 55000, "days": 4 }
+  ]
+}

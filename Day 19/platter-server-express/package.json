@@ -1,0 +1,19 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "platter server",
+  "license": "ISC",
+  "author": "ashutosh",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon .",
+    "start:prod": "node ."
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
