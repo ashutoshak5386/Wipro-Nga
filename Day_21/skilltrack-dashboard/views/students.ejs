@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Progress Dashboard</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        table { border-collapse: collapse; width: 70%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        th { background-color: #4CAF50; color: white; }
+        form { margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <h1>SkillTrack Academy - Student Progress</h1>
+
+    <table>
+        <tr>
+            <th>ID</th><th>Name</th><th>Email</th><th>Progress (%)</th>
+        </tr>
+        <% students.forEach(student => { %>
+        <tr>
+            <td><%= student.id %></td>
+            <td><%= student.name %></td>
+            <td><%= student.email %></td>
+            <td><%= student.progress %></td>
+        </tr>
+        <% }) %>
+    </table>
+
+    <h3>Add New Student</h3>
+    <form action="/students" method="POST">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="number" name="progress" placeholder="Progress %" />
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

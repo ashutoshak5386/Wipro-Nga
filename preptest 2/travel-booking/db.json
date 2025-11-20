@@ -21,5 +21,19 @@
       "nights": 6,
       "rating": 4.9
     }
+  ],
+  "bookings": [
+    {
+      "id": "e4a6",
+      "name": "Success Test",
+      "email": "success@test.com",
+      "destination": "Tokyo"
+    },
+    {
+      "id": "f5d8",
+      "name": "Jane Doe",
+      "email": "success@test.com",
+      "destination": "Paris"
+    }
   ]
 }
