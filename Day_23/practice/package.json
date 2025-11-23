@@ -1,0 +1,24 @@
+{
+  "name": "day_23",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "start-dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^5.1.0",
+    "express-session": "^1.17.3",
+    "nodemon": "^3.1.11",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "session": "^0.1.0"
+  }
+}
